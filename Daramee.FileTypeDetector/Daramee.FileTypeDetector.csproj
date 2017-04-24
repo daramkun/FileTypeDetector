@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D610C25-94EE-4D2A-BB36-3AFB988B243E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Daramee.FileTypeDetector</RootNamespace>
+    <AssemblyName>Daramee.FileTypeDetector</AssemblyName>
+    <DefaultLanguage>ko-KR</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AbstractCompoundFileDetailDetector.cs" />
+    <Compile Include="DetectorService.cs" />
+    <Compile Include="Detectors\ApkDetector.cs" />
+    <Compile Include="Detectors\BashShellScriptDetector.cs" />
+    <Compile Include="Detectors\BitmapDetector.cs" />
+    <Compile Include="Detectors\CabDetector.cs" />
+    <Compile Include="Detectors\CertDetector.cs" />
+    <Compile Include="Detectors\CompoundHWPDetector.cs" />
+    <Compile Include="Detectors\CursorDetector.cs" />
+    <Compile Include="Detectors\DLLDetector.cs" />
+    <Compile Include="Detectors\DMGDetector.cs" />
+    <Compile Include="Detectors\DOCXDetector.cs" />
+    <Compile Include="Detectors\EpubDetector.cs" />
+    <Compile Include="Detectors\EXEDetector.cs" />
+    <Compile Include="Detectors\FlacDetector.cs" />
+    <Compile Include="Detectors\FLVDetector.cs" />
+    <Compile Include="Detectors\GifDetector.cs" />
+    <Compile Include="Detectors\GzDetector.cs" />
+    <Compile Include="Detectors\HWPMLDetector.cs" />
+    <Compile Include="Detectors\IconDetector.cs" />
+    <Compile Include="Detectors\ISODetector.cs" />
+    <Compile Include="Detectors\JavaClassDetector.cs" />
+    <Compile Include="Detectors\Jpeg2000Detector.cs" />
+    <Compile Include="Detectors\JpegDetector.cs" />
+    <Compile Include="Detectors\LzhDetector.cs" />
+    <Compile Include="Detectors\MidiDetector.cs" />
+    <Compile Include="Detectors\MP3Detector.cs" />
+    <Compile Include="Detectors\MP4Detector.cs" />
+    <Compile Include="Detectors\MsiDetector.cs" />
+    <Compile Include="Detectors\OggDetector.cs" />
+    <Compile Include="Detectors\PAKArchiveDetector.cs" />
+    <Compile Include="Detectors\PdfDetector.cs" />
+    <Compile Include="Detectors\PngDetector.cs" />
+    <Compile Include="Detectors\PPSXDetector.cs" />
+    <Compile Include="Detectors\PPTXDetector.cs" />
+    <Compile Include="Detectors\BinaryPropertyListDetector.cs" />
+    <Compile Include="Detectors\PsdDetector.cs" />
+    <Compile Include="Detectors\QuakeArchiveDetector.cs" />
+    <Compile Include="Detectors\RarDetector.cs" />
+    <Compile Include="Detectors\REGDetector.cs" />
+    <Compile Include="Detectors\SQLiteDetector.cs" />
+    <Compile Include="Detectors\TarDetector.cs" />
+    <Compile Include="Detectors\TextDetector.cs" />
+    <Compile Include="Detectors\ThumbsDBDetector.cs" />
+    <Compile Include="Detectors\TiffDetector.cs" />
+    <Compile Include="Detectors\VisualStudioSolutionDetector.cs" />
+    <Compile Include="Detectors\WindowsMemoryDumpDetector.cs" />
+    <Compile Include="Detectors\WindowsShortcutDetector.cs" />
+    <Compile Include="Detectors\XarDetector.cs" />
+    <Compile Include="Detectors\XLSXDetector.cs" />
+    <Compile Include="Detectors\XMLDetector.cs" />
+    <Compile Include="Detectors\ZDetector.cs" />
+    <Compile Include="Detectors\ZipDetector.cs" />
+    <Compile Include="Detectors\_3GPDetector.cs" />
+    <Compile Include="Detectors\_7zDetector.cs" />
+    <Compile Include="IDetector.cs" />
+    <Compile Include="InstantDetector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AbstractRegexSignatureDetector.cs" />
+    <Compile Include="AbstractSignatureDetector.cs" />
+    <Compile Include="AbstractZipDetailDetector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenMcdf, Version=2.1.2.1274, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenMcdf.2.1.2.1274\lib\OpenMcdf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
