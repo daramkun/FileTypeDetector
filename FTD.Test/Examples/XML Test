@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shaders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://daram.pe.kr/SxmlSchema.xsd">
+  <language type="glsl" version="1.3">
+    <shader type="vertex">
+      <![CDATA[
+layout(location = 0) in vec3 i_position;
+layout(location = 1) in vec4 i_overlay;
+layout(location = 2) in vec2 i_texture;
+
+uniform mat4 projectionMatrix;
+uniform mat4 worldMatrix;
+
+out vec4 o_overlay;
+out vec2 o_texture;
+
+void main () {
+    vec4 pos = vec4(i_position, 1);
+    pos = worldMatrix * pos;
+    pos = projectionMatrix * pos;
+
+    gl_Position = pos;
+
+    o_overlay = i_overlay;
+    o_texture = i_texture;
+}
+    ]]>
+    </shader>
+    <shader type="pixel">
+      <![CDATA[
+in vec4 o_overlay;
+in vec2 o_texture;
+
+uniform sampler2D texture0;
+
+void main () {
+    gl_FragColor = texture2D ( texture0, getTexUV(o_texture) ) * o_overlay;
+}
+    ]]>
+    </shader>
+  </language>
+
+  <language type="glsl" version="1.2" option="i_position,i_overlay,i_texture">
+    <shader type="vertex">
+      <![CDATA[
+attribute vec3 i_position;
+attribute vec4 i_overlay;
+attribute vec2 i_texture;
+
+uniform mat4 projectionMatrix;
+uniform mat4 worldMatrix;
+
+varying vec4 o_overlay;
+varying vec2 o_texture;
+
+void main () {
+    vec4 pos = vec4(i_position, 1);
+    pos = worldMatrix * pos;
+    pos = projectionMatrix * pos;
+
+    gl_Position = pos;
+
+    o_overlay = i_overlay;
+    o_texture = i_texture;
+}
+    ]]>
+    </shader>
+    <shader type="pixel">
+      <![CDATA[
+varying vec4 o_overlay;
+varying vec2 o_texture;
+
+uniform sampler2D texture0;
+
+void main () {
+    gl_FragColor = texture2D ( texture0, getTexUV(o_texture) ) * o_overlay;
+}
+    ]]>
+    </shader>
+  </language>
+
+  <language type="glsles" version="1.2">
+    <shader type="vertex">
+      <![CDATA[
+attribute vec3 i_position;
+attribute vec4 i_overlay;
+attribute vec2 i_texture;
+
+uniform mat4 projectionMatrix;
+uniform mat4 worldMatrix;
+
+varying vec4 o_overlay;
+varying vec2 o_texture;
+
+void main () {
+    vec4 pos = vec4(i_position, 1);
+    pos = worldMatrix * pos;
+    pos = projectionMatrix * pos;
+
+    gl_Position = pos;
+
+    o_overlay = i_overlay;
+    o_texture = i_texture;
+}
+    ]]>
+    </shader>
+    <shader type="pixel">
+      <![CDATA[
+varying vec4 o_overlay;
+varying vec2 o_texture;
+
+uniform sampler2D texture0;
+
+void main () {
+    gl_FragColor = texture2D ( texture0, getTexUV(o_texture) ) * o_overlay;
+}
+    ]]>
+    </shader>
+  </language>
+
+	<language type="hlsl" version="5.0">
+		<shader type="vertex">
+			<![CDATA[
+float4x4 projectionMatrix;
+float4x4 worldMatrix;
+
+struct VS_INPUT
+{
+   float2 i_position : POSITION;
+   float4 i_overlay : COLOR;
+   float2 i_texture : TEXCOORD0;
+};
+
+struct PS_INPUT
+{
+   float4 o_position : SV_POSITION;
+   float4 o_overlay : COLOR;
+   float2 o_texture : TEXCOORD0;
+};
+
+PS_INPUT vs_main(VS_INPUT input)
+{
+   PS_INPUT output;
+   output.o_position = float4(input.i_position, 1, 1);
+   output.o_position = mul(output.o_position, worldMatrix);
+   output.o_position = mul(output.o_position, projectionMatrix);
+   output.o_overlay = input.i_overlay;
+   output.o_texture = input.i_texture;
+   return output;
+}
+			]]>
+		</shader>
+		<shader type="pixel">
+			<![CDATA[
+Texture2D texture0;
+
+SamplerState TextureSampler
+{
+   Filter = MIN_MAG_MIP_LINEAR;
+   AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct PS_INPUT
+{
+   float4 o_position : SV_POSITION;
+   float4 o_overlay : COLOR;
+   float2 o_texture : TEXCOORD0;
+};
+
+float4 ps_main(PS_INPUT input) : SV_TARGET
+{
+   return texture0.Sample(TextureSampler, input.o_texture) * input.o_overlay;
+}
+			]]>
+		</shader>
+	</language>
+
+  <language type="hlsl" version="2.0">
+    <shader type="vertex">
+      <![CDATA[
+float4x4 projectionMatrix;
+float4x4 worldMatrix;
+
+struct VS_INPUT
+{
+   float2 i_position : POSITION;
+   float4 i_overlay : COLOR;
+   float2 i_texture : TEXCOORD0;
+};
+
+struct PS_INPUT
+{
+   float4 o_position : POSITION;
+   float4 o_overlay : COLOR;
+   float2 o_texture : TEXCOORD0;
+};
+
+PS_INPUT vs_main(VS_INPUT input)
+{
+   PS_INPUT output;
+   output.o_position = float4(input.i_position, 1, 1);
+   output.o_position = mul(output.o_position, worldMatrix);
+   output.o_position = mul(output.o_position, projectionMatrix);
+   output.o_overlay = input.i_overlay;
+   output.o_texture = input.i_texture;
+   return output;
+}
+    ]]>
+    </shader>
+    <shader type="pixel">
+      <![CDATA[
+sampler2D texture0;
+
+struct PS_INPUT
+{
+   float4 o_position : POSITION;
+   float4 o_overlay : COLOR;
+   float2 o_texture : TEXCOORD0;
+};
+
+float4 ps_main(PS_INPUT input) : COLOR
+{
+   return tex2D ( texture0, input.o_texture ) * input.o_overlay;
+}
+    ]]>
+    </shader>
+  </language>
+</shaders>

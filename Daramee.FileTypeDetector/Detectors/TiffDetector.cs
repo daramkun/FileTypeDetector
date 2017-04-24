@@ -18,6 +18,6 @@ namespace Daramee.FileTypeDetector.Detectors
 
 		protected override SignatureInformation [] SignatureInformations => TIFF_SignatureInfo;
 
-		public override string ToString () => "TIFF Detector";
+		public override string ToString () => "Tagged Image File Format Detector";
 	}
 }

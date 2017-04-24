@@ -36,6 +36,7 @@
     <Compile Include="AbstractCompoundFileDetailDetector.cs" />
     <Compile Include="DetectorService.cs" />
     <Compile Include="Detectors\ApkDetector.cs" />
+    <Compile Include="Detectors\AudioVideoInterleaveDetector.cs" />
     <Compile Include="Detectors\BashShellScriptDetector.cs" />
     <Compile Include="Detectors\BitmapDetector.cs" />
     <Compile Include="Detectors\CabDetector.cs" />
@@ -51,7 +52,7 @@
     <Compile Include="Detectors\FLVDetector.cs" />
     <Compile Include="Detectors\GifDetector.cs" />
     <Compile Include="Detectors\GzDetector.cs" />
-    <Compile Include="Detectors\HWPMLDetector.cs" />
+    <Compile Include="Detectors\HWPDetector.cs" />
     <Compile Include="Detectors\IconDetector.cs" />
     <Compile Include="Detectors\ISODetector.cs" />
     <Compile Include="Detectors\JavaClassDetector.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Detectors\PsdDetector.cs" />
     <Compile Include="Detectors\QuakeArchiveDetector.cs" />
     <Compile Include="Detectors\RarDetector.cs" />
+    <Compile Include="Detectors\RedhatPackageManagerPackageDetector.cs" />
     <Compile Include="Detectors\REGDetector.cs" />
     <Compile Include="Detectors\SQLiteDetector.cs" />
     <Compile Include="Detectors\TarDetector.cs" />
@@ -79,6 +81,8 @@
     <Compile Include="Detectors\ThumbsDBDetector.cs" />
     <Compile Include="Detectors\TiffDetector.cs" />
     <Compile Include="Detectors\VisualStudioSolutionDetector.cs" />
+    <Compile Include="Detectors\WaveDetector.cs" />
+    <Compile Include="Detectors\WebAssemblyDetector.cs" />
     <Compile Include="Detectors\WindowsMemoryDumpDetector.cs" />
     <Compile Include="Detectors\WindowsShortcutDetector.cs" />
     <Compile Include="Detectors\XarDetector.cs" />
@@ -102,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="REFERENCES.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

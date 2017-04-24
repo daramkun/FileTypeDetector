@@ -13,6 +13,6 @@ namespace Daramee.FileTypeDetector.Detectors
 		public override string Precondition => "zip";
 		public override string Extension => "xlsx";
 
-		public override string ToString () => "Microsoft SpreedSheet Open XML Document(XLSX) Detector";
+		public override string ToString () => "Microsoft SpreadSheet Open XML Document(XLSX) Detector";
 	}
 }

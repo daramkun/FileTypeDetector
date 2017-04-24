@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ "$1" == "start" ]; then
+	#/home/daramkun/mcs/start.sh
+	cd /home/daramkun/mcs
+	java -jar mcs.jar -Xmx1024M -Xms512M nogui &
+elif [ "$1" == "stop" ]; then
+	#/home/daramkun/mcs/stop.sh
+	kill -9 `ps -aef|grep "java -jar mcs.jar"|grep -v grep|awk '{ print $2 }'`
+elif [ "$1" == "restart" ]; then
+	service mcs stop
+	service mcs start
+elif [ "$1" == "check" ]; then
+	ps -aef|grep java|grep -v grep|awk '{ print $2, $8, $9, $10 }'
+else
+	echo "Usage: mcs {start|stop|restart|check}"
+fi

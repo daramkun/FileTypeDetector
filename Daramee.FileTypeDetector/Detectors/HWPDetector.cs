@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
-	class HWPMLDetector : AbstractRegexSignatureDetector
+	class HWPDetector : AbstractRegexSignatureDetector
 	{
 		public override string Extension => "hwp";
 
-		protected override Regex Signature => new Regex ( "^HWP Document File V[0-9]+.[0-9][0-9] \\\\x1a\\\\1\\\\2\\\\3\\\\4\\\\5" );
+		protected override Regex Signature => new Regex ( "^HWP Document File V[0-9]+.[0-9][0-9]" );
 
-		public override string ToString () => "Hancom HWPML Document Detector";
+		public override string ToString () => "Hancom HWP Document Detector";
 	}
 }
