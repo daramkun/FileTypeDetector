@@ -36,6 +36,7 @@
     <Compile Include="AbstractCompoundFileDetailDetector.cs" />
     <Compile Include="AbstractISOBaseMediaFileDetailDetector.cs" />
     <Compile Include="DetectorService.cs" />
+    <Compile Include="Detectors\DirectDrawSurfaceFormatDetector.cs" />
     <Compile Include="Detectors\M4ADetector.cs" />
     <Compile Include="Detectors\ApkDetector.cs" />
     <Compile Include="Detectors\AudioVideoInterleaveDetector.cs" />
