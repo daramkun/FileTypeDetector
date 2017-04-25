@@ -89,7 +89,7 @@
     <Compile Include="Detectors\REGDetector.cs" />
     <Compile Include="Detectors\RichTextFormatDetector.cs" />
     <Compile Include="Detectors\SQLiteDetector.cs" />
-    <Compile Include="Detectors\UStarFormatDetector.cs" />
+    <Compile Include="Detectors\UStarFormatTarDetector.cs" />
     <Compile Include="Detectors\TextDetector.cs" />
     <Compile Include="Detectors\ThumbsDBDetector.cs" />
     <Compile Include="Detectors\TiffDetector.cs" />
