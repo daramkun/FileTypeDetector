@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AbstractCompoundFileDetailDetector.cs" />
+    <Compile Include="AbstractISOBaseMediaFileDetailDetector.cs" />
     <Compile Include="DetectorService.cs" />
+    <Compile Include="Detectors\M4ADetector.cs" />
     <Compile Include="Detectors\ApkDetector.cs" />
     <Compile Include="Detectors\AudioVideoInterleaveDetector.cs" />
     <Compile Include="Detectors\BashShellScriptDetector.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Detectors\JavaClassDetector.cs" />
     <Compile Include="Detectors\Jpeg2000Detector.cs" />
     <Compile Include="Detectors\JpegDetector.cs" />
+    <Compile Include="Detectors\JpegXRDetector.cs" />
     <Compile Include="Detectors\LzhDetector.cs" />
     <Compile Include="Detectors\MidiDetector.cs" />
     <Compile Include="Detectors\MP3Detector.cs" />

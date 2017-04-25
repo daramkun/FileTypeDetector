@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
-	class _3GPDetector : AbstractSignatureDetector
+	class _3GPDetector : AbstractISOBaseMediaFileDetailDetector
 	{
-		static SignatureInformation [] _3GP_SignatureInfo = new []
-		{
-			new SignatureInformation () { Position = 0, Signature = new byte [] { 0x00, 0x00, 0x00, 0x14, 0x66, 0x74, 0x79, 0x70 } },
-			new SignatureInformation () { Position = 0, Signature = new byte [] { 0x00, 0x00, 0x00, 0x20, 0x66, 0x74, 0x79, 0x70 } },
-		};
-
 		public override string Extension => "3gp";
 
-		protected override SignatureInformation [] SignatureInformations => _3GP_SignatureInfo;
+		protected override IEnumerable<string> NextSignature
+		{ get { yield return "3gp6"; yield return "3gp5"; yield return "3gp4"; yield return "3gp3"; yield return "3gp2"; yield return "3gp1"; } }
 
 		public override string ToString () => "3GPP Detector";
 	}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -16,6 +17,8 @@ namespace FTD.Test
 			string [] filenames = Directory.GetFiles ( @"..\..\Examples" );
 			DetectorService.AddDetectors ( null );
 
+			Stopwatch stopwatch = new Stopwatch ();
+			stopwatch.Start ();
 			foreach ( var filename in filenames )
 			{
 				using ( Stream stream = new FileStream ( filename, FileMode.Open, FileAccess.Read ) )
@@ -24,6 +27,8 @@ namespace FTD.Test
 					Console.WriteLine ( $"{Path.GetFileName ( filename ).PadRight ( 32 )}: {detector?.Extension.PadRight ( 10 )}({detector})" );
 				}
 			}
+			stopwatch.Stop ();
+			Console.WriteLine ( $"Detection Time: {stopwatch.Elapsed}(Average: {TimeSpan.FromMilliseconds ( stopwatch.ElapsedMilliseconds / filenames.Length )})" );
 		}
 	}
 }
