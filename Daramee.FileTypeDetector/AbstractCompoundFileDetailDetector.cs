@@ -19,15 +19,18 @@ namespace Daramee.FileTypeDetector
 
 		public bool Detect ( Stream stream )
 		{
+			CompoundFile cf = null;
+
 			try
 			{
-				CompoundFile cf = new CompoundFile ( stream, CFSUpdateMode.ReadOnly, CFSConfiguration.LeaveOpen );
+				cf = new CompoundFile ( stream, CFSUpdateMode.ReadOnly, CFSConfiguration.LeaveOpen | CFSConfiguration.Default );
 
 				foreach ( var chunk in Chunks )
 				{
-					if ( !IsValidChunk ( chunk, cf.RootStorage.GetStream ( chunk ).GetData () ) )
+					var compoundFileStream = cf.RootStorage.GetStream ( chunk );
+					if ( compoundFileStream == null || !IsValidChunk ( chunk, compoundFileStream.GetData () ) )
 					{
-						cf.Close ();
+						//cf.Close ();
 						return false;
 					}
 				}
@@ -36,7 +39,12 @@ namespace Daramee.FileTypeDetector
 
 				return true;
 			}
-			catch { return false; }
+			catch
+			{
+				//if ( cf != null )
+					//cf.Close ();
+				return false;
+			}
 		}
 	}
 }

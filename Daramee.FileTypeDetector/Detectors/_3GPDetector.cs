@@ -10,8 +10,7 @@ namespace Daramee.FileTypeDetector.Detectors
 	{
 		public override string Extension => "3gp";
 
-		protected override IEnumerable<string> NextSignature
-		{ get { yield return "3gp6"; yield return "3gp5"; yield return "3gp4"; yield return "3gp3"; yield return "3gp2"; yield return "3gp1"; } }
+		protected override IEnumerable<string> NextSignature { get { yield return "3gp"; } }
 
 		public override string ToString () => "3GPP Detector";
 	}

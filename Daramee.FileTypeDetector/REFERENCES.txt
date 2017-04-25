@@ -1,3 +1,4 @@
 ﻿Almost files implements from "List of file signatures - Wikipedia (https://en.wikipedia.org/wiki/List_of_file_signatures)"
  and "Common File Signatures(http://forensic-proof.com/archives/300)"
  and "HWP File Format(https://www.hancom.com/etc/hwpDownload.do)" with "HWP Document File Identifying(http://blog.naver.com/sinarn/130156996913)"
+ and "File Signatures(http://www.garykessler.net/library/file_sigs.html)"

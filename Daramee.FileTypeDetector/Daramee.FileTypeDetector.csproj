@@ -62,10 +62,14 @@
     <Compile Include="Detectors\JpegDetector.cs" />
     <Compile Include="Detectors\JpegXRDetector.cs" />
     <Compile Include="Detectors\LzhDetector.cs" />
+    <Compile Include="Detectors\M4VDetector.cs" />
+    <Compile Include="Detectors\MicrosoftExcelXLSDetector.cs" />
+    <Compile Include="Detectors\MicrosoftInstallerDetector.cs" />
+    <Compile Include="Detectors\MicrosoftPowerPointPPTDetector.cs" />
+    <Compile Include="Detectors\MicrosoftWordDOCDetector.cs" />
     <Compile Include="Detectors\MidiDetector.cs" />
     <Compile Include="Detectors\MP3Detector.cs" />
     <Compile Include="Detectors\MP4Detector.cs" />
-    <Compile Include="Detectors\MsiDetector.cs" />
     <Compile Include="Detectors\OggDetector.cs" />
     <Compile Include="Detectors\PAKArchiveDetector.cs" />
     <Compile Include="Detectors\PdfDetector.cs" />
@@ -75,9 +79,11 @@
     <Compile Include="Detectors\BinaryPropertyListDetector.cs" />
     <Compile Include="Detectors\PsdDetector.cs" />
     <Compile Include="Detectors\QuakeArchiveDetector.cs" />
+    <Compile Include="Detectors\QuickTimeDetector.cs" />
     <Compile Include="Detectors\RarDetector.cs" />
     <Compile Include="Detectors\RedhatPackageManagerPackageDetector.cs" />
     <Compile Include="Detectors\REGDetector.cs" />
+    <Compile Include="Detectors\RichTextFormatDetector.cs" />
     <Compile Include="Detectors\SQLiteDetector.cs" />
     <Compile Include="Detectors\TarDetector.cs" />
     <Compile Include="Detectors\TextDetector.cs" />
@@ -86,6 +92,7 @@
     <Compile Include="Detectors\VisualStudioSolutionDetector.cs" />
     <Compile Include="Detectors\WaveDetector.cs" />
     <Compile Include="Detectors\WebAssemblyDetector.cs" />
+    <Compile Include="Detectors\WebPDetector.cs" />
     <Compile Include="Detectors\WindowsMemoryDumpDetector.cs" />
     <Compile Include="Detectors\WindowsShortcutDetector.cs" />
     <Compile Include="Detectors\XarDetector.cs" />

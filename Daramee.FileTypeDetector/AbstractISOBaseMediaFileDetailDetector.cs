@@ -22,11 +22,14 @@ namespace Daramee.FileTypeDetector
 				// ftyp
 				if ( reader.ReadByte () == 0x66 && reader.ReadByte () == 0x74 && reader.ReadByte () == 0x79 && reader.ReadByte () == 0x70 )
 				{
-					string readed = Encoding.UTF8.GetString ( reader.ReadBytes ( 4 ), 0, 4 );
-					stream.Position = offset;
-					foreach ( var ns in NextSignature)
-					if ( ns == readed )
-						return true;
+					foreach ( var ns in NextSignature )
+					{
+						stream.Position = 8;
+						string readed = Encoding.GetEncoding ( "ascii" ).GetString ( reader.ReadBytes ( ns.Length ), 0, ns.Length );
+						stream.Position = offset;
+						if ( ns == readed )
+							return true;
+					}
 				}
 			}
 
