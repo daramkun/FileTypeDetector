@@ -64,6 +64,8 @@
     <Compile Include="Detectors\JpegXRDetector.cs" />
     <Compile Include="Detectors\LzhDetector.cs" />
     <Compile Include="Detectors\M4VDetector.cs" />
+    <Compile Include="Detectors\MatroskaAudioDetector.cs" />
+    <Compile Include="Detectors\MatroskaVideoDetector.cs" />
     <Compile Include="Detectors\MicrosoftExcelXLSDetector.cs" />
     <Compile Include="Detectors\MicrosoftInstallerDetector.cs" />
     <Compile Include="Detectors\MicrosoftPowerPointPPTDetector.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Detectors\VisualStudioSolutionDetector.cs" />
     <Compile Include="Detectors\WaveDetector.cs" />
     <Compile Include="Detectors\WebAssemblyDetector.cs" />
+    <Compile Include="Detectors\WebMDetector.cs" />
     <Compile Include="Detectors\WebPDetector.cs" />
     <Compile Include="Detectors\WindowsMemoryDumpDetector.cs" />
     <Compile Include="Detectors\WindowsShortcutDetector.cs" />
@@ -103,20 +106,52 @@
     <Compile Include="Detectors\ZipDetector.cs" />
     <Compile Include="Detectors\_3GPDetector.cs" />
     <Compile Include="Detectors\_7zDetector.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\CFException.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\CFItem.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\CFStorage.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\CFStream.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\CompoundFile.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\Directory.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\DirectoryEntry.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\Header.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\IDirectoryEntry.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\RBTree\RBTree.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\Sector.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\SectorCollection.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\StreamRW.cs" />
+    <Compile Include="ExternalLibs\OpenMCDF\StreamView.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\ByteVector.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\ByteVectorList.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\CombinedTag.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\CorruptFileException.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Debugger.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\File.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\FileTypes.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Genres.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\ICodec.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\ListBase.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\AudioTrack.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\EBMLElement.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\EBMLIDs.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\File.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\MatroskaIDs.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\SubtitleTrack.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\Tag.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\Track.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Matroska\VideoTrack.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Picture.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Properties.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\ReadOnlyByteVector.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\StringList.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\SupportedMimeType.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\Tag.cs" />
+    <Compile Include="ExternalLibs\TagLibSharp\UnsupportedFormatException.cs" />
     <Compile Include="IDetector.cs" />
     <Compile Include="InstantDetector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AbstractRegexSignatureDetector.cs" />
     <Compile Include="AbstractSignatureDetector.cs" />
     <Compile Include="AbstractZipDetailDetector.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="OpenMcdf, Version=2.1.2.1274, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OpenMcdf.2.1.2.1274\lib\OpenMcdf.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="REFERENCES.txt" />
