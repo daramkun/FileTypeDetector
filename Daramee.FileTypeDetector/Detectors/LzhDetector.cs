@@ -10,7 +10,7 @@ namespace Daramee.FileTypeDetector.Detectors
 	{
 		static SignatureInformation [] LZH_SignatureInfo = new []
 		{
-			new SignatureInformation () { Position = 0, Signature = new byte [] { 0x2D, 0x6C, 0x68 } },
+			new SignatureInformation () { Position = 2, Signature = new byte [] { 0x2D, 0x6C, 0x68 } },
 		};
 
 		public override string Extension => "lzh";

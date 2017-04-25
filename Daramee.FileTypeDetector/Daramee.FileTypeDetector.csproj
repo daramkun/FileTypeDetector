@@ -77,6 +77,7 @@
     <Compile Include="Detectors\PAKArchiveDetector.cs" />
     <Compile Include="Detectors\PdfDetector.cs" />
     <Compile Include="Detectors\PngDetector.cs" />
+    <Compile Include="Detectors\PrePOSIXtarDetector.cs" />
     <Compile Include="Detectors\PPSXDetector.cs" />
     <Compile Include="Detectors\PPTXDetector.cs" />
     <Compile Include="Detectors\BinaryPropertyListDetector.cs" />
@@ -88,7 +89,7 @@
     <Compile Include="Detectors\REGDetector.cs" />
     <Compile Include="Detectors\RichTextFormatDetector.cs" />
     <Compile Include="Detectors\SQLiteDetector.cs" />
-    <Compile Include="Detectors\TarDetector.cs" />
+    <Compile Include="Detectors\UStarFormatDetector.cs" />
     <Compile Include="Detectors\TextDetector.cs" />
     <Compile Include="Detectors\ThumbsDBDetector.cs" />
     <Compile Include="Detectors\TiffDetector.cs" />
