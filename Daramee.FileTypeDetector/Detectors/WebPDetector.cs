@@ -18,6 +18,6 @@ namespace Daramee.FileTypeDetector.Detectors
 
 		protected override SignatureInformation [] SignatureInformations => WEBP_SignatureInfo;
 
-		public override string ToString () => "Wave(WAV) Detector";
+		public override string ToString () => "WebP Detector";
 	}
 }

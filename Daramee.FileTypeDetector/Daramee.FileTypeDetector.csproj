@@ -36,6 +36,7 @@
     <Compile Include="AbstractCompoundFileDetailDetector.cs" />
     <Compile Include="AbstractISOBaseMediaFileDetailDetector.cs" />
     <Compile Include="DetectorService.cs" />
+    <Compile Include="Detectors\Bzip2Detector.cs" />
     <Compile Include="Detectors\DirectDrawSurfaceFormatDetector.cs" />
     <Compile Include="Detectors\M4ADetector.cs" />
     <Compile Include="Detectors\ApkDetector.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Detectors\RedhatPackageManagerPackageDetector.cs" />
     <Compile Include="Detectors\REGDetector.cs" />
     <Compile Include="Detectors\RichTextFormatDetector.cs" />
+    <Compile Include="Detectors\ShockwaveFlashDetector.cs" />
     <Compile Include="Detectors\SQLiteDetector.cs" />
     <Compile Include="Detectors\UStarFormatTarDetector.cs" />
     <Compile Include="Detectors\TextDetector.cs" />
