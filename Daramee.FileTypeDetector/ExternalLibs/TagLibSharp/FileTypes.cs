@@ -90,24 +90,24 @@ namespace TagLib {
 		///    Constructs and initializes the <see cref="FileTypes" />
 		///    class by registering the default types.
 		/// </summary>
-		/*static FileTypes ()
+		static FileTypes ()
 		{
 			Init();
-		}*/
+		}
 		
 		/// <summary>
 		///    Initializes the class by registering the default types.
 		/// </summary>
-		/*internal static void Init ()
+		internal static void Init ()
 		{
 			if(file_types != null)
 				return;
 			
 			file_types = new Dictionary<string, Type>();
 			
-			foreach(Type type in static_file_types)
-				Register (type);
-		}*/
+			/*foreach(Type type in static_file_types)
+				Register (type);*/
+		}
 		
 		/// <summary>
 		///    Registers a <see cref="File" /> subclass to be used when

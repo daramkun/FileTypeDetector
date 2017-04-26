@@ -87,9 +87,9 @@ namespace TagLib {
 			Console.Write (".");*/
 		}
 		
-		private static string allowed = "0123456789abcdefghijklmnopqr" +
+		/*private static string allowed = "0123456789abcdefghijklmnopqr" +
 			"stuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_+-={}" +
-			"[];:'\",.<>?/\\|";
+			"[];:'\",.<>?/\\|";*/
 
 
 		private static Dictionary <object, Dictionary <object, DebugTimeData>>

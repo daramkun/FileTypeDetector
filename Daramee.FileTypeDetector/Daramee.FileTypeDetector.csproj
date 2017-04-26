@@ -82,6 +82,7 @@
     <Compile Include="Detectors\OpenDocumentSpreadSheetDetector.cs" />
     <Compile Include="Detectors\OpenDocumentTextDetector.cs" />
     <Compile Include="Detectors\PAKArchiveDetector.cs" />
+    <Compile Include="Detectors\PDBDetector.cs" />
     <Compile Include="Detectors\PdfDetector.cs" />
     <Compile Include="Detectors\PFXDetector.cs" />
     <Compile Include="Detectors\PngDetector.cs" />
