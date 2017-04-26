@@ -24,13 +24,12 @@ namespace Daramee.FileTypeDetector.Detectors
 		{
 			if ( base.Detect ( stream ) )
 			{
-				/*stream.Position = 0x1F;
+				stream.Position = 0x1F;
 				byte [] buffer = new byte [ 8 ];
 				stream.Read ( buffer, 0, 8 );
 				if ( Encoding.GetEncoding ( "ascii" ).GetString ( buffer, 0, 8 ) != "matroska" )
 					return false;
-
-				return true;*/
+				
 				using ( var file = new TagLib.Matroska.File ( new TagLib.File.LocalStreamAbstraction ( stream ) ) )
 				{
 					if ( file.Properties.MediaTypes.HasFlag ( TagLib.MediaTypes.Video ) )
