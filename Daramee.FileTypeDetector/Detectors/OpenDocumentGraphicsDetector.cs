@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
-	class EpubDetector : AbstractZipDetailDetector
+	class OpenDocumentGraphicsDetector : AbstractZipDetailDetector
 	{
 		public override IEnumerable<string> Files { get { yield return "mimetype"; } }
 
 		public override string Precondition => "zip";
-		public override string Extension => "epub";
+		public override string Extension => "odg";
 
 		protected override bool IsValid ( string filename, ZipArchiveEntry entry )
 		{
@@ -21,16 +21,16 @@ namespace Daramee.FileTypeDetector.Detectors
 			{
 				using ( Stream mimetypeStream = entry.Open () )
 				{
-					byte [] buffer = new byte [ "application/epub+zip".Length ];
+					byte [] buffer = new byte [ "application/vnd.oasis.opendocument.graphics".Length ];
 					if ( mimetypeStream.Read ( buffer, 0, buffer.Length ) != buffer.Length )
 						return false;
-					if ( Encoding.GetEncoding ( "ascii" ).GetString ( buffer, 0, buffer.Length ) != "application/epub+zip" )
+					if ( Encoding.GetEncoding ( "ascii" ).GetString ( buffer, 0, buffer.Length ) != "application/vnd.oasis.opendocument.graphics" )
 						return false;
 				}
 			}
 			return base.IsValid ( filename, entry );
 		}
 
-		public override string ToString () => "e-Pub Document File Detector";
+		public override string ToString () => "OpenDocument Graphics File Detector";
 	}
 }
