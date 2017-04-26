@@ -82,7 +82,7 @@ namespace Daramee.FileTypeDetector.Detectors
 
 			foreach ( var encoding in encodings )
 			{
-				for ( int count = readed; count >= ( readed - 4 ); --count )
+				for ( int count = readed; count >= ( readed - 16 ); --count )
 				{
 					bool succeed = true;
 
@@ -100,9 +100,9 @@ namespace Daramee.FileTypeDetector.Detectors
 
 					int byted = encoding.GetBytes ( TextBuffer, 0, texted, EncodingBuffer, 0 );
 
-					if ( succeed && readed == byted )
+					if ( succeed/* && readed == byted*/ )
 					{
-						for ( int i = 0; i < readed; ++i )
+						for ( int i = 0; i < count; ++i )
 						{
 							if ( ReadBuffer [ i ] != EncodingBuffer [ i ] )
 							{

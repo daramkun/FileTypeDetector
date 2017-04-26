@@ -99,6 +99,7 @@
     <Compile Include="Detectors\RichTextFormatDetector.cs" />
     <Compile Include="Detectors\ShockwaveFlashDetector.cs" />
     <Compile Include="Detectors\SQLiteDetector.cs" />
+    <Compile Include="Detectors\SRTDetector.cs" />
     <Compile Include="Detectors\UStarFormatTarDetector.cs" />
     <Compile Include="Detectors\TextDetector.cs" />
     <Compile Include="Detectors\ThumbsDBDetector.cs" />
