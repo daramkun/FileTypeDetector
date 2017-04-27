@@ -17,7 +17,7 @@ namespace Daramee.FileTypeDetector
 
 		public virtual bool Detect ( Stream stream )
 		{
-			int readBufferSize = Signature.ToString ().Length * 64;
+			int readBufferSize = Signature.ToString ().Length * 8;
 			char [] buffer = new char [ readBufferSize ];
 
 			var encodings = new []

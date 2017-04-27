@@ -1,0 +1,61 @@
+[Cinematics.1]
+ShowIntro = "0"
+
+[GPU.5]
+GPUDeviceID = "26591"
+GPUName = "Radeon (TM) RX 480 Graphics"
+GPUScaler = "7.000000"
+GPUVenderID = "4098"
+
+[GPU.6]
+GPUDeviceID = "26591"
+GPUName = "Radeon (TM) RX 480 Graphics"
+GPUScaler = "6.000000"
+GPUVenderID = "4098"
+
+[Render.13]
+AADetail = "0"
+AnisotropicFiltering = "0"
+CpuForceSyncEnabled = "1"
+DirectionalShadowDetail = "1"
+EffectsQuality = "1"
+FrameRateCap = "300"
+FullScreenRefresh = "60"
+FullscreenWindow = "0"
+FullscreenWindowEnabled = "0"
+LastTDR = "1492685449"
+LightQuality = "2"
+LocalFogDetail = "1"
+LocalReflections = "0"
+MaxAnisotropy = "1"
+MaxEffectsAnisotropy = "1"
+MaxExtraQualityAnisotropy = "1"
+ModelQuality = "2"
+RefractionDetail = "0"
+RenderBrightness = "0.002394"
+RenderContrast = "1.003299"
+SelectedDisplay = "-1"
+ShowFPSCounter = "0"
+ShowGPUTemp = "1"
+ShowIND = "0"
+ShowRTT = "0"
+ShowVRAMUsage = "0"
+SimpleDirectionalShadows = "1"
+SoundQuality = "2"
+SSAOEnabled = "0"
+SSLRDetailLevel = "0"
+SSQuality = "0"
+TripleBufferingEnabled = "0"
+VerticalSyncEnabled = "0"
+WindowedFullscreen = "1"
+WindowMode = "1"
+
+[Sound.3]
+DolbyAtmosHeadphone = "0"
+LocalMicMute = "0"
+LocalMicVolume = "100.000000"
+MasterVolume = "100.000000"
+
+[Subtitles.1]
+Subtitles = "1"
+

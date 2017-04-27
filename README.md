@@ -18,6 +18,7 @@ This library following MIT-License. but Some codes(OpenMCDF, TagLib#) followed M
 | BZ2               | Bunzip2 Compressed |
 | CAB               | Microsoft Cabinet  |
 | CLASS             | Java Bytecode      |
+| CONFIG            | .NET Configuration File |
 | CRT, CERT         | Certificate        |
 | CUR               | Cursor             |
 | DB                | Windows Thumbs.db Thumbnail Database |
@@ -36,6 +37,7 @@ This library following MIT-License. but Some codes(OpenMCDF, TagLib#) followed M
 | HDP               | HD Photo(JPEG XR) Image |
 | HWP               | Legacy HWP, HWPML, CFBF HWP |
 | ICO               | Icon               |
+| INI               | Initialization File |
 | ISO               | ISO-9660 Disc Image |
 | LNK               | Windows Shortcut Link |
 | JP2               | JPEG 2000 Image    |
