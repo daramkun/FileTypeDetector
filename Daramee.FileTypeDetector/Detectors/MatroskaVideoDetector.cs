@@ -30,7 +30,7 @@ namespace Daramee.FileTypeDetector.Detectors
 				if ( Encoding.GetEncoding ( "ascii" ).GetString ( buffer, 0, 8 ) != "matroska" )
 					return false;
 				
-				using ( var file = new TagLib.Matroska.File ( new TagLib.File.LocalStreamAbstraction ( stream ) ) )
+				using ( var file = new TagLib.Matroska.File ( new LocalStreamAbstraction ( stream ) ) )
 				{
 					if ( file.Properties.MediaTypes.HasFlag ( TagLib.MediaTypes.Video ) )
 					{

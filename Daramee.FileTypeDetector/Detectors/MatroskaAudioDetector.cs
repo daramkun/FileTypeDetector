@@ -24,7 +24,7 @@ namespace Daramee.FileTypeDetector.Detectors
 		{
 			if ( base.Detect ( stream ) )
 			{
-				using ( var file = new TagLib.Matroska.File ( new TagLib.File.LocalStreamAbstraction ( stream ) ) )
+				using ( var file = new TagLib.Matroska.File ( new LocalStreamAbstraction ( stream ) ) )
 				{
 					if ( !file.Properties.MediaTypes.HasFlag ( TagLib.MediaTypes.Video ) )
 					{

@@ -1,174 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D610C25-94EE-4D2A-BB36-3AFB988B243E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Daramee.FileTypeDetector</RootNamespace>
-    <AssemblyName>Daramee.FileTypeDetector</AssemblyName>
-    <DefaultLanguage>ko-KR</DefaultLanguage>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>FileTypeDetector.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Compile Include="AbstractCompoundFileDetailDetector.cs" />
-    <Compile Include="AbstractISOBaseMediaFileDetailDetector.cs" />
-    <Compile Include="DetectorService.cs" />
-    <Compile Include="Detectors\Bzip2Detector.cs" />
-    <Compile Include="Detectors\ConfigurationDetector.cs" />
-    <Compile Include="Detectors\DirectDrawSurfaceFormatDetector.cs" />
-    <Compile Include="Detectors\InitializationDetector.cs" />
-    <Compile Include="Detectors\M4ADetector.cs" />
-    <Compile Include="Detectors\ApkDetector.cs" />
-    <Compile Include="Detectors\AudioVideoInterleaveDetector.cs" />
-    <Compile Include="Detectors\BashShellScriptDetector.cs" />
-    <Compile Include="Detectors\BitmapDetector.cs" />
-    <Compile Include="Detectors\CabDetector.cs" />
-    <Compile Include="Detectors\CertDetector.cs" />
-    <Compile Include="Detectors\CompoundHWPDetector.cs" />
-    <Compile Include="Detectors\CursorDetector.cs" />
-    <Compile Include="Detectors\DLLDetector.cs" />
-    <Compile Include="Detectors\DMGDetector.cs" />
-    <Compile Include="Detectors\DOCXDetector.cs" />
-    <Compile Include="Detectors\EpubDetector.cs" />
-    <Compile Include="Detectors\EXEDetector.cs" />
-    <Compile Include="Detectors\FlacDetector.cs" />
-    <Compile Include="Detectors\FLVDetector.cs" />
-    <Compile Include="Detectors\GifDetector.cs" />
-    <Compile Include="Detectors\GzDetector.cs" />
-    <Compile Include="Detectors\HWPDetector.cs" />
-    <Compile Include="Detectors\IconDetector.cs" />
-    <Compile Include="Detectors\ISODetector.cs" />
-    <Compile Include="Detectors\JavaClassDetector.cs" />
-    <Compile Include="Detectors\Jpeg2000Detector.cs" />
-    <Compile Include="Detectors\JpegDetector.cs" />
-    <Compile Include="Detectors\JpegXRDetector.cs" />
-    <Compile Include="Detectors\LzhDetector.cs" />
-    <Compile Include="Detectors\M4VDetector.cs" />
-    <Compile Include="Detectors\MatroskaAudioDetector.cs" />
-    <Compile Include="Detectors\MatroskaVideoDetector.cs" />
-    <Compile Include="Detectors\MicrosoftExcelXLSDetector.cs" />
-    <Compile Include="Detectors\MicrosoftInstallerDetector.cs" />
-    <Compile Include="Detectors\MicrosoftPowerPointPPTDetector.cs" />
-    <Compile Include="Detectors\MicrosoftWordDOCDetector.cs" />
-    <Compile Include="Detectors\MidiDetector.cs" />
-    <Compile Include="Detectors\MikeOBrienPackDetector.cs" />
-    <Compile Include="Detectors\MP3Detector.cs" />
-    <Compile Include="Detectors\MP4Detector.cs" />
-    <Compile Include="Detectors\OggDetector.cs" />
-    <Compile Include="Detectors\OpenDocumentFormulaDetector.cs" />
-    <Compile Include="Detectors\OpenDocumentGraphicsDetector.cs" />
-    <Compile Include="Detectors\OpenDocumentPresentationDetector.cs" />
-    <Compile Include="Detectors\OpenDocumentSpreadSheetDetector.cs" />
-    <Compile Include="Detectors\OpenDocumentTextDetector.cs" />
-    <Compile Include="Detectors\PAKArchiveDetector.cs" />
-    <Compile Include="Detectors\PDBDetector.cs" />
-    <Compile Include="Detectors\PdfDetector.cs" />
-    <Compile Include="Detectors\PFXDetector.cs" />
-    <Compile Include="Detectors\PngDetector.cs" />
-    <Compile Include="Detectors\PrePOSIXtarDetector.cs" />
-    <Compile Include="Detectors\PPSXDetector.cs" />
-    <Compile Include="Detectors\PPTXDetector.cs" />
-    <Compile Include="Detectors\BinaryPropertyListDetector.cs" />
-    <Compile Include="Detectors\PsdDetector.cs" />
-    <Compile Include="Detectors\QuakeArchiveDetector.cs" />
-    <Compile Include="Detectors\QuickTimeDetector.cs" />
-    <Compile Include="Detectors\RarDetector.cs" />
-    <Compile Include="Detectors\RedhatPackageManagerPackageDetector.cs" />
-    <Compile Include="Detectors\REGDetector.cs" />
-    <Compile Include="Detectors\RichTextFormatDetector.cs" />
-    <Compile Include="Detectors\ShockwaveFlashDetector.cs" />
-    <Compile Include="Detectors\SQLiteDetector.cs" />
-    <Compile Include="Detectors\SRTDetector.cs" />
-    <Compile Include="Detectors\UStarFormatTarDetector.cs" />
-    <Compile Include="Detectors\TextDetector.cs" />
-    <Compile Include="Detectors\ThumbsDBDetector.cs" />
-    <Compile Include="Detectors\TiffDetector.cs" />
-    <Compile Include="Detectors\VisualStudioSolutionDetector.cs" />
-    <Compile Include="Detectors\WaveDetector.cs" />
-    <Compile Include="Detectors\WebAssemblyDetector.cs" />
-    <Compile Include="Detectors\WebMDetector.cs" />
-    <Compile Include="Detectors\WebPDetector.cs" />
-    <Compile Include="Detectors\WindowsMemoryDumpDetector.cs" />
-    <Compile Include="Detectors\WindowsShortcutDetector.cs" />
-    <Compile Include="Detectors\XarDetector.cs" />
-    <Compile Include="Detectors\XLSXDetector.cs" />
-    <Compile Include="Detectors\XMLDetector.cs" />
-    <Compile Include="Detectors\ZDetector.cs" />
-    <Compile Include="Detectors\ZipDetector.cs" />
-    <Compile Include="Detectors\_3GPDetector.cs" />
-    <Compile Include="Detectors\_7zDetector.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\CFException.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\CFItem.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\CFStorage.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\CFStream.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\CompoundFile.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\Directory.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\DirectoryEntry.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\Header.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\IDirectoryEntry.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\RBTree\RBTree.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\Sector.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\SectorCollection.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\StreamRW.cs" />
-    <Compile Include="ExternalLibs\OpenMCDF\StreamView.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\ByteVector.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\ByteVectorList.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\CombinedTag.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\CorruptFileException.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Debugger.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\File.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\FileTypes.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Genres.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\ICodec.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\ListBase.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\AudioTrack.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\EBMLElement.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\EBMLIDs.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\File.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\MatroskaIDs.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\SubtitleTrack.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\Tag.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\Track.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Matroska\VideoTrack.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Picture.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Properties.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\ReadOnlyByteVector.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\StringList.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\SupportedMimeType.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\Tag.cs" />
-    <Compile Include="ExternalLibs\TagLibSharp\UnsupportedFormatException.cs" />
-    <Compile Include="IDetector.cs" />
-    <Compile Include="InstantDetector.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AbstractRegexSignatureDetector.cs" />
-    <Compile Include="AbstractSignatureDetector.cs" />
-    <Compile Include="AbstractZipDetailDetector.cs" />
+    <PackageReference Include="OpenMcdf-2" Version="2.1.1.5" />
   </ItemGroup>
+
   <ItemGroup>
-    <Content Include="REFERENCES.txt" />
+    <ProjectReference Include="..\..\taglib-sharp\src\taglib-sharp.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+
 </Project>
