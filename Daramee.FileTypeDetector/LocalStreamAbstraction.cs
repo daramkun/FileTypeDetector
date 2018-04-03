@@ -21,7 +21,7 @@ namespace Daramee.FileTypeDetector
 
 		public void CloseStream ( Stream stream )
 		{
-			stream.Close ();
+			//stream.Close ();
 		}
 	}
 }
