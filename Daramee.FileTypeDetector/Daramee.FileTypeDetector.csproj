@@ -5,6 +5,15 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>FileTypeDetector.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
+    <PackageId>Daramee.FileTypeDetector</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Daramee</Authors>
+    <Company>DARAM WORLD</Company>
+    <Product>File Type Detector</Product>
+    <Description>Signature based File Type Detecting Library</Description>
+    <Copyright>Copyright (c) 2015-2018 Daramee</Copyright>
+    <PackageProjectUrl>https://github.com/daramkun/FileTypeDetector</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/daramkun/FileTypeDetector/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
