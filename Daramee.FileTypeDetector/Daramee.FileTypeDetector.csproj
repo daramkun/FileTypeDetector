@@ -6,6 +6,7 @@
     <AssemblyOriginatorKeyFile>FileTypeDetector.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <PackageId>Daramee.FileTypeDetector</PackageId>
+    <Title>File Type Detector</Title>
     <Version>1.0.1</Version>
     <Authors>Daramee</Authors>
     <Company>DARAM WORLD</Company>
@@ -14,14 +15,15 @@
     <Copyright>Copyright (c) 2015-2018 Daramee</Copyright>
     <PackageProjectUrl>https://github.com/daramkun/FileTypeDetector</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/daramkun/FileTypeDetector/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/daramkun/FileTypeDetector</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>File Extension</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>https://raw.githubusercontent.com/daramkun/FileTypeDetector/master/Icon.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\taglib-sharp\src\taglib-sharp.csproj" />
   </ItemGroup>
 
 </Project>
