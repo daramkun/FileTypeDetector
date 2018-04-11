@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard14</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>FileTypeDetector.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <PackageId>Daramee.FileTypeDetector</PackageId>
     <Title>File Type Detector</Title>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Daramee</Authors>
     <Company>DARAM WORLD</Company>
     <Product>File Type Detector</Product>
@@ -23,7 +23,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+    <Reference Include="System.IO.Compression" />
   </ItemGroup>
+
+  <Import Project="..\Daramee.FileTypeDetector.Shared\Daramee.FileTypeDetector.Shared.projitems" Label="Shared" />
 
 </Project>

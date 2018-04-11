@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5e1c88ae-6cca-430c-8adb-de4de4ce2174</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Daramee.FileTypeDetector.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AbstractCompoundFileDetailDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AbstractFullRegexDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AbstractISOBaseMediaFileDetailDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AbstractRegexSignatureDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AbstractSignatureDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AbstractZipDetailDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DetectorService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\ApkDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\AudioVideoInterleaveDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\BashShellScriptDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\BinaryPropertyListDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\BitmapDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\Bzip2Detector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\CabDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\CertDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\CompoundHWPDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\ConfigurationDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\CursorDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\DirectDrawSurfaceFormatDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\DLLDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\DMGDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\DOCXDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\EpubDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\EXEDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\FlacDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\FLVDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\GifDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\GzDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\HWPDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\IconDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\InitializationDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\ISODetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\JavaClassDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\Jpeg2000Detector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\JpegDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\JpegXRDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\LzhDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\M4ADetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\M4VDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MicrosoftExcelXLSDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MicrosoftInstallerDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MicrosoftPowerPointPPTDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MicrosoftWordDocDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MidiDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MikeOBrienPackDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MP3Detector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\MP4Detector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\OggDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\OpenDocumentFormulaDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\OpenDocumentGraphicsDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\OpenDocumentPresentationDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\OpenDocumentSpreadSheetDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\OpenDocumentTextDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PAKArchiveDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PDBDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PdfDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PFXDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PngDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PPSXDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PPTXDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PrePOSIXtarDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PsdDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\QuakeArchiveDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\QuickTimeDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\RarDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\RedhatPackageManagerPackageDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\REGDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\RichTextFormatDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\ShockwaveFlashDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\SQLiteDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\SRTDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\TextDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\ThumbsDBDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\TiffDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\UStarFormatTarDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\VisualStudioSolutionDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\WaveDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\WebAssemblyDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\WebMDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\WebPDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\WindowsMemoryDumpDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\WindowsShortcutDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\XarDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\XLSXDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\XMLDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\ZDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\ZipDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\_3GPDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\_7zDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExternalLibs\OpenMCDF\CompoundFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InstantDetector.cs" />
+  </ItemGroup>
+</Project>
