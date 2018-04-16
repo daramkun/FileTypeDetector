@@ -86,7 +86,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\UStarFormatTarDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\VisualStudioSolutionDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\WaveDetector.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Detectors\WebAssemblyDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\WebMDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\WebPDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\WindowsMemoryDumpDetector.cs" />
