@@ -6,7 +6,7 @@
     <SharedGUID>5e1c88ae-6cca-430c-8adb-de4de4ce2174</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Daramee.FileTypeDetector.Shared</Import_RootNamespace>
+    <Import_RootNamespace>Daramee.FileTypeDetector</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AbstractCompoundFileDetailDetector.cs" />
