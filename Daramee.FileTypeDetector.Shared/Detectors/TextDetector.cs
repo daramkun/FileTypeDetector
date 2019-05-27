@@ -20,6 +20,7 @@ namespace Daramee.FileTypeDetector.Detectors
 		static Encoding [] UTF7Encodings = new [] { Encoding.GetEncoding ( "utf-7" ) };
 		static Encoding [] OtherwiseEncodings = new []
 		{
+#if !NETFX_CORE
 			Encoding.GetEncoding ( "ks_c_5601-1987" ),
 			Encoding.GetEncoding ( "iso-2022-kr" ),
 			Encoding.GetEncoding ( "shift_jis" ),
@@ -29,6 +30,7 @@ namespace Daramee.FileTypeDetector.Detectors
 			Encoding.GetEncoding ( "windows-1252" ),
 			Encoding.GetEncoding ( "windows-1253" ),
 			Encoding.GetEncoding ( "windows-1254" ),
+#endif
 			Encoding.GetEncoding ( "ascii" ),
 			Encoding.UTF8,
 			Encoding.GetEncoding ( "utf-7" ),
