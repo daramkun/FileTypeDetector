@@ -45,6 +45,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\Jpeg2000Detector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\JpegDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\JpegXRDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\KTXDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\LzhDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\M4ADetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\M4VDetector.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\PDBDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\PdfDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\PFXDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\PKMDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\PngDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\PPSXDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\PPTXDetector.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\SQLiteDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\SRTDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\TextDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Detectors\TgaDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\ThumbsDBDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\TiffDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\UStarFormatTarDetector.cs" />
