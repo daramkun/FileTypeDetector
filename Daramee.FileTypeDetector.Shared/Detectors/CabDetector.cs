@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Archive )]
 	class CabDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] CAB_SignatureInfo = new []

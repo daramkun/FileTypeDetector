@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Audio )]
 	class MP3Detector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] MP3_SignatureInfo = new []

@@ -8,6 +8,7 @@ using System.Xml;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class ConfigurationDetector : IDetector
 	{
 		public string Precondition => "txt";

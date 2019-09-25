@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Image )]
 	class TiffDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] TIFF_SignatureInfo = new []

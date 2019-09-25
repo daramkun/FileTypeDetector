@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Executable )]
 	class JavaClassDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] CLASS_SignatureInfo = new []

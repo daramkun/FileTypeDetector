@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class PPTXDetector : AbstractZipDetailDetector
 	{
 		public override IEnumerable<string> Files { get { yield return "[Content_Types].xml"; yield return "_rels/.rels"; yield return "ppt/_rels/presentation.xml.rels"; } }

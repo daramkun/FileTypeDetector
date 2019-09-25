@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class RichTextFormatDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] RTF_SignatureInfo = new []

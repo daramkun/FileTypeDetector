@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Video )]
+	[FormatCategory ( FormatCategories.Executable )]
 	class ShockwaveFlashDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] SWF_SignatureInfo = new []

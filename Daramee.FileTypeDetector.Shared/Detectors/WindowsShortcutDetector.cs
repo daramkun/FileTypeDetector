@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.System )]
 	class WindowsShortcutDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] LNK_SignatureInfo = new []

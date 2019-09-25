@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.System )]
 	class ThumbsDBDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] THUMBDB_SignatureInfo = new []

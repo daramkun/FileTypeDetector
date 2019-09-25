@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Image )]
 	class BitmapDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] BMP_SignatureInfo = new []

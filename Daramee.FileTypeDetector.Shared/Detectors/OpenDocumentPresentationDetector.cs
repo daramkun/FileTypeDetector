@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class OpenDocumentPresentationDetector : AbstractZipDetailDetector
 	{
 		public override IEnumerable<string> Files { get { yield return "mimetype"; } }

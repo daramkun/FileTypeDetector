@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Image )]
 	class PKMDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] PKM_SignatureInfo = new []

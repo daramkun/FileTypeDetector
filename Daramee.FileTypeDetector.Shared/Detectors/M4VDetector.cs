@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Video )]
 	class M4VDetector : AbstractISOBaseMediaFileDetailDetector
 	{
 		public override string Extension => "m4v";

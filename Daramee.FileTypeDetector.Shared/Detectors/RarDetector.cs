@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Archive )]
+	[FormatCategory ( FormatCategories.Compression )]
 	class RarDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] RAR_SignatureInfo = new []

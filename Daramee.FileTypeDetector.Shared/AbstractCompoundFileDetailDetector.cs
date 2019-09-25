@@ -7,17 +7,26 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector
 {
-	public abstract class AbstractCompoundFileDetailDetector : IDetector
+	public abstract class AbstractCompoundFileDetailDetector : AbstractSignatureDetector
 	{
-		public abstract IEnumerable<string> Chunks { get; }
+		static SignatureInformation [] CF_SignatureInfo = new []
+		{
+			new SignatureInformation () { Position = 0, Signature = new byte [] { 0xd0, 0xcf, 0x11, 0xe0, 0xa1, 0xb1, 0x1a, 0xe1 } },
+		};
 
-		public abstract string Extension { get; }
-		public virtual string Precondition { get { return null; } }
+		protected override SignatureInformation [] SignatureInformations => CF_SignatureInfo;
+
+		public abstract IEnumerable<string> Chunks { get; }
 
 		protected abstract bool IsValidChunk ( string chunkName, byte [] chunkData );
 
-		public bool Detect ( Stream stream )
+		public new bool Detect ( Stream stream )
 		{
+			if ( !base.Detect ( stream ) )
+				return false;
+
+			stream.Position = 0;
+
 			CompoundFile cf = null;
 
 			try

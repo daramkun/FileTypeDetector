@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.System )]
 	class WindowsMemoryDumpDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] DMP_SignatureInfo = new []

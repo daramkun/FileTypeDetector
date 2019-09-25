@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Image )]
 	class Jpeg2000Detector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] JPEG_SignatureInfo = new []

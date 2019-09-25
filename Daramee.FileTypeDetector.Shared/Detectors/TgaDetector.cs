@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Image )]
 	class TgaDetector : IDetector
 	{
 		public string Extension => "tga";

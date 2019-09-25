@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Archive )]
 	class ISODetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] ISO_SignatureInfo = new []

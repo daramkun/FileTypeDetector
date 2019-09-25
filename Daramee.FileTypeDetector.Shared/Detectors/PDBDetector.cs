@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class PDBDetector : AbstractRegexSignatureDetector
 	{
 		public override string Extension => "pdb";

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class PdfDetector : AbstractRegexSignatureDetector
 	{
 		public override string Extension => "pdf";

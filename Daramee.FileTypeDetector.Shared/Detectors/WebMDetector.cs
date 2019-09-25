@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Video )]
+	[FormatCategory ( FormatCategories.Audio )]
 	class WebMDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] WEBM_SignatureInfo = new []

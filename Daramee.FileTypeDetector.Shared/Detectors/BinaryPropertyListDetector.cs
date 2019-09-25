@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class BinaryPropertyListDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] BPLIST_SignatureInfo = new []

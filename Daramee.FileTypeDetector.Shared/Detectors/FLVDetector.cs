@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Video )]
 	class FLVDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] FLV_SignatureInfo = new []

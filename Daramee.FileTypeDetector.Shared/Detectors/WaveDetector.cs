@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Audio )]
 	class WaveDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] WAV_SignatureInfo = new []

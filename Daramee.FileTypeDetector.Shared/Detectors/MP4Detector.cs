@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Video )]
+	[FormatCategory ( FormatCategories.Audio )]
+	[FormatCategory ( FormatCategories.Image )]
 	class MP4Detector : AbstractISOBaseMediaFileDetailDetector
 	{
 		public override string Extension => "mp4";

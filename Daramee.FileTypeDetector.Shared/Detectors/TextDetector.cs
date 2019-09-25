@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class TextDetector : IDetector
 	{
 		static byte [] SignatureBuffer = new byte [ 4 ];

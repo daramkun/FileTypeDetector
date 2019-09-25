@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Archive )]
+	[FormatCategory ( FormatCategories.Compression )]
 	class _7zDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] _7Z_SignatureInfo = new []

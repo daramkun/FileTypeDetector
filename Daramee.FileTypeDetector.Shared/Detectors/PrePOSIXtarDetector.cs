@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Archive )]
 	class POSIXtarDetector : IDetector
 	{
 		public string Precondition => null;

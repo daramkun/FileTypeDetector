@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Audio )]
+	[FormatCategory ( FormatCategories.Video )]
 	class OggDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] OGG_SignatureInfo = new []

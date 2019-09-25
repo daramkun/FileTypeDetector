@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Archive )]
 	class MikeOBrienPackDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] MPQ_SignatureInfo = new []

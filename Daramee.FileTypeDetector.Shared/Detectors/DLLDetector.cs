@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.System )]
+	[FormatCategory ( FormatCategories.Executable )]
 	class DLLDetector : IDetector
 	{
 		public string Precondition => "exe";

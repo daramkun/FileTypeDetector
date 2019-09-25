@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Executable )]
 	class EXEDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] EXE_SignatureInfo = new []

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Video )]
+	[FormatCategory ( FormatCategories.Audio )]
 	class _3GPDetector : AbstractISOBaseMediaFileDetailDetector
 	{
 		public override string Extension => "3gp";

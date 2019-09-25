@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Executable )]
 	class BashShellScriptDetector : AbstractRegexSignatureDetector
 	{
 		public override string Precondition => "txt";

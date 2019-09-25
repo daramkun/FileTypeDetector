@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
+	[FormatCategory ( FormatCategories.System )]
 	class REGDetector : AbstractRegexSignatureDetector
 	{
 		public override string Precondition => "txt";

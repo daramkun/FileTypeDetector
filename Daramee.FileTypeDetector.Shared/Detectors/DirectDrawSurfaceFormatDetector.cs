@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Image )]
 	class DirectDrawSurfaceFormatDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] DDS_SignatureInfo = new []

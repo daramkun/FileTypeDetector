@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class MicrosoftPowerPointPPTDetector : AbstractCompoundFileDetailDetector
 	{
 		public override IEnumerable<string> Chunks { get { yield return "PowerPoint Document"; } }

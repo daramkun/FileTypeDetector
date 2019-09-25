@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Video )]
+	[FormatCategory ( FormatCategories.Image )]
 	class GifDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] GIF_SignatureInfo = new []

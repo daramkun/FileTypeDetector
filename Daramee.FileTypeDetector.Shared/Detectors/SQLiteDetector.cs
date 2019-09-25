@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class SQLiteDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] SQLITE_SignatureInfo = new []

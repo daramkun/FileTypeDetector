@@ -100,6 +100,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\ZipDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\_3GPDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Detectors\_7zDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FormatCategoryAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IDetector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)InstantDetector.cs" />
   </ItemGroup>

@@ -12,6 +12,8 @@ namespace Daramee.FileTypeDetector
 	{
 		private static List<IDetector> Detectors { get; set; } = new List<IDetector> ();
 
+		public static IReadOnlyList<IDetector> Registered => Detectors;
+
 		public static void AddDetector<T> () where T : IDetector
 		{
 			var instance = Activator.CreateInstance<T> ();
@@ -24,14 +26,31 @@ namespace Daramee.FileTypeDetector
 				( Detectors as List<IDetector> ).Add ( instance );
 		}
 
-		public static void AddDetectors ( Assembly asm = null )
+		public static void AddDetectors ( Assembly asm = null, FormatCategories category = FormatCategories.All )
 		{
 			if ( asm == null ) asm = Assembly.Load ( new AssemblyName ( "Daramee.FileTypeDetector" ) );
 			TypeInfo detectorTypeInfo = typeof ( IDetector ).GetTypeInfo ();
 			foreach ( var type in asm.DefinedTypes )
 			{
 				if ( detectorTypeInfo.IsAssignableFrom ( type ) && !type.IsAbstract && type.DeclaredConstructors.First ().GetParameters ().Length == 0 )
+				{
+					if ( category != FormatCategories.All )
+					{
+						bool found = false;
+						foreach ( var fc in type.GetCustomAttributes<FormatCategoryAttribute> () )
+						{
+							if ( fc.Category.HasFlag ( category ) )
+							{
+								found = true;
+								break;
+							}
+						}
+
+						if ( !found )
+							continue;
+					}
 					AddDetector ( Activator.CreateInstance ( type.AsType () ) as IDetector );
+				}
 			}
 		}
 

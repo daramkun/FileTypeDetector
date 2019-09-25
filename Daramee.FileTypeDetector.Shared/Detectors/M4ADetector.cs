@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Audio )]
 	class M4ADetector : AbstractISOBaseMediaFileDetailDetector
 	{
 		public override string Extension => "m4a";

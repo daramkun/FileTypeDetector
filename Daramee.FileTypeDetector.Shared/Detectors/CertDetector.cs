@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Document )]
 	class CertDetector : AbstractSignatureDetector
 	{
 		static SignatureInformation [] CRT_SignatureInfo = new []

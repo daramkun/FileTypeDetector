@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Daramee.FileTypeDetector.Detectors
 {
+	[FormatCategory ( FormatCategories.Archive )]
 	class MicrosoftInstallerDetector : AbstractCompoundFileDetailDetector
 	{
 		public override IEnumerable<string> Chunks { get { yield return "SummaryInformation"; } }
