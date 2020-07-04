@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Daramee.FileTypeDetector", "Daramee.FileTypeDetector\Daramee.FileTypeDetector.csproj", "{9D610C25-94EE-4D2A-BB36-3AFB988B243E}"
 EndProject
@@ -12,6 +12,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Daramee.FileTypeDetector.Shared\Daramee.FileTypeDetector.Shared.projitems*{5e1c88ae-6cca-430c-8adb-de4de4ce2174}*SharedItemsImports = 13
+		Daramee.FileTypeDetector.Shared\Daramee.FileTypeDetector.Shared.projitems*{9d610c25-94ee-4d2a-bb36-3afb988b243e}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

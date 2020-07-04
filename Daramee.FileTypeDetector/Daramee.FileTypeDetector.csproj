@@ -1,31 +1,42 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard14</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net46</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>FileTypeDetector.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <PackageId>Daramee.FileTypeDetector</PackageId>
     <Title>File Type Detector</Title>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Daramee</Authors>
     <Company>DARAM WORLD</Company>
     <Product>File Type Detector</Product>
     <Description>Signature based File Type Detecting Library</Description>
-    <Copyright>Copyright (c) 2015-2018 Daramee</Copyright>
+    <Copyright>Copyright (c) 2015-2020 Daramee</Copyright>
     <PackageProjectUrl>https://github.com/daramkun/FileTypeDetector</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/daramkun/FileTypeDetector/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+	<PackageIconUrl></PackageIconUrl>
     <RepositoryUrl>https://github.com/daramkun/FileTypeDetector</RepositoryUrl>
-    <RepositoryType>GitHub</RepositoryType>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>File Extension</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageIconUrl>https://raw.githubusercontent.com/daramkun/FileTypeDetector/master/Icon.png</PackageIconUrl>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageIcon>Icon.png</PackageIcon>
   </PropertyGroup>
 
+  <Import Project="..\Daramee.FileTypeDetector.Shared\Daramee.FileTypeDetector.Shared.projitems" Label="Shared" />
+
   <ItemGroup>
-    <Reference Include="System.IO.Compression" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
   </ItemGroup>
 
-  <Import Project="..\Daramee.FileTypeDetector.Shared\Daramee.FileTypeDetector.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <None Include="..\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
