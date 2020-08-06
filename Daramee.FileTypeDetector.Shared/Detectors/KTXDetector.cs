@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Daramee.FileTypeDetector.Detectors
+﻿namespace Daramee.FileTypeDetector.Detectors
 {
 	[FormatCategory ( FormatCategories.Image )]
 	class KTXDetector : AbstractSignatureDetector
